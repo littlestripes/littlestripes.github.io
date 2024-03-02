@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>projects - elijah's web site</title>
+    <link rel="icon" type="image/x-icon" href="images/house2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body class="ubuntu-mono-regular">
+    
+    <div class="header">
+        <a href="index.html">
+            <h2 class="name ubuntu-bold">Elijah Kamali</h2>
+        </a>
+        <div id="links">
+            <a href="projects.html"><img class="icon" id="projects-icon" title="My projects" src="images/hammer.png"></a>
+            <a href="https://github.com/littlestripes" target="_blank"><img class="icon" id="github-icon" title="My Github" src="images/github-mark-white.png"></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="typed-container">
+            <span id="typed"></span>
+            <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+            <script>
+                new TypeIt("#typed", {
+                    cursorChar: '_',
+                    speed: 200
+                })
+                    .type('projects')
+                    .go();
+            </script>
+        </div>
+
+        <div class="content">
+            <p><i>Under construction!</i></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
