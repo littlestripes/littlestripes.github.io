@@ -110,7 +110,7 @@ body {
 
 @media only screen and (max-width: 600px) {
     .container {
-        margin: 5vh 10vw;
+        margin: 0 10vw;
     }
 }
 
