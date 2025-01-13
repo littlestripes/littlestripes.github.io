@@ -38,6 +38,10 @@
 
 
 
+a:visited {
+    color: #928374;
+}
+
 body {
     background-color: #504945;
 
@@ -140,6 +144,19 @@ body {
 .content #intro {
     padding: 0 5vw;
 }
+
+.project-thumb {
+    margin-top: 1rem;  /* account for drop shadow */
+    border-radius: 2rem;
+    width: 12vw;
+
+    filter: drop-shadow(0.5em 0.5em 0.25em #282828);
+}
+
+.content #projects-table td {
+    padding: 0 1rem;
+}
+
 
 
 
