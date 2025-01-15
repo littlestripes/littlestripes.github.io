@@ -42,6 +42,10 @@ a:visited {
     color: #928374;
 }
 
+a:link {
+    color: #fbf1c7;
+}
+
 body {
     background-color: #504945;
 
