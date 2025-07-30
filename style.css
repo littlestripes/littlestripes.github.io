@@ -116,6 +116,12 @@ body {
     margin: 0 25vw;
 }
 
+.hero {
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    background: linear-gradient(to bottom, rgba(40, 40, 40, 1), rgba(40, 40, 40, 0.7)), url("./images/website_hero_bg.jpg");
+}
+
 @media only screen and (max-width: 600px) {
     .container {
         margin: 0 10vw;
@@ -126,9 +132,16 @@ body {
     font-size: 8em;
 }
 
+#typed-hero {
+    font-size: 4em;
+}
+
 @media only screen and (max-width: 600px) {
     #typed {
-        font-size: 4em;
+        font-size: 3em;
+    }
+    #typed-hero {
+        font-size: 1em;
     }
 }
 
@@ -137,12 +150,20 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     margin-top: 5vh;
+    /* position cursor fully after last char (default is -0.125) */
+    --ti-cursor-transform: translateX(0);
 }
 
 .content {
     display: flex;
     flex: 5 1 40vh;
     margin: 4vh 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        font-size: 16px;
+    }
 }
 
 .content #intro {
@@ -155,6 +176,28 @@ body {
     width: 12vw;
 
     filter: drop-shadow(0.5em 0.5em 0.25em #282828);
+}
+
+.content .screenshot-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    font-size: 16px;
+}
+
+.content .screenshot {
+    margin: 1rem 0;  /* account for drop shadow */
+    border-radius: 2rem;
+    width: 40vw;
+
+    filter: drop-shadow(0.5em 0.5em 0.25em #282828);
+}
+
+@media only screen and (max-width: 600px) {
+    .content .screenshot {
+        width: 80vw;
+    }
 }
 
 .content #projects-table td {
@@ -175,4 +218,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 4vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        font-size: 0.75rem;
+    }
 }
