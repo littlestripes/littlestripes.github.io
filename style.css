@@ -224,6 +224,32 @@ body {
     }
 }
 
+pre code {
+    display: block;
+    padding: 1em 1.5em;
+
+    background: #1d2021;
+    border: 1px solid #ebdbb2;
+    border-left: 3px solid #d65d0e;
+    border-radius: 0.5rem;
+
+    color: #928374;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+
+    page-break-inside: avoid;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.container #back-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
 
 
 
