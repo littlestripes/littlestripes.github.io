@@ -116,16 +116,16 @@ body {
     margin: 0 25vw;
 }
 
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 0 5vw;
+    }
+}
+
 .hero {
     padding-left: 2rem;
     padding-bottom: 2rem;
     background: linear-gradient(to bottom, rgba(40, 40, 40, 1), rgba(40, 40, 40, 0.7)), url("./images/website_hero_bg.jpg");
-}
-
-@media only screen and (max-width: 600px) {
-    .container {
-        margin: 0 10vw;
-    }
 }
 
 #typed {
@@ -163,6 +163,7 @@ body {
 @media only screen and (max-width: 600px) {
     .content {
         font-size: 16px;
+        margin: 0;
     }
 }
 
@@ -176,6 +177,12 @@ body {
     width: 12vw;
 
     filter: drop-shadow(0.5em 0.5em 0.25em #282828);
+}
+
+@media only screen and (max-width: 600px) {
+    .project-thumb {
+        width: 16vw;
+    }
 }
 
 .content .screenshot-container {
@@ -202,6 +209,12 @@ body {
 
 .content #projects-table td {
     padding: 2rem 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .content #projects-table td {
+        padding: 0.5rem 0.5rem;
+    }
 }
 
 
