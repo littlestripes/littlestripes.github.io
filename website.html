@@ -75,7 +75,8 @@ echo "&lt;h1&gt;Woohoo!&lt;/h1&gt;" &gt; /var/www/html/index.html
             </div>
             <p>Excellent! One problem: this website was going to bleed my wallet like a stuck pig as it was. Running the EC2 instance combined with holding onto that Elastic IP would not be cost-effective at all. I had assumed I would need to host the site on a VPS in order to build out a CI/CD pipeline later, but I then discovered S3 Sync, a Github Action that can sync a Github repo to an S3 bucket. Now that we know that we can do better, let's optimize.</p>
             <h2>round 2</h2>
-            <p>To make updating the website much easier than dragging and dropping files directly into the S3 bucket whenever a change is made, I set up a Github Actions workflow using s3-sync to sync the website's repo made for Github Pages with the S3 bucket hosting the site. It's not all that different from the example seen on the <a target="_blank" href="https://github.com/marketplace/actions/s3-sync">s3-sync page</a>:</p>
+            <p>I'd need a new S3 bucket for this endeavor; to add an Alias record associating the domain with the S3 static site, I'd need a bucket with the same name as the domain. After creating one, enabling ACLs (for s3-sync to upload files on my behalf), and uploading all the website's files to the bucket, the site was live at the correct address!</p>
+            <p>To make updating the website much easier than dragging and dropping files directly into the S3 bucket whenever a change is made, I set up a Github Actions workflow using s3-sync to sync the website's repo (originally made for Github Pages, now repurposed) with the S3 bucket hosting the site upon every push to master. It's not all that different from the example seen on the <a target="_blank" href="https://github.com/marketplace/actions/s3-sync">s3-sync page</a>:</p>
             <pre><code>name: Sync Website
 
 on:
