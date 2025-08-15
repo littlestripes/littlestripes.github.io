@@ -62,6 +62,7 @@
             <p>First thing's first: the URL is probably the biggest reason for me to migrate in the first place. During a hands-on exercise in the Udemy course's section on Route 53, I registered my own domain name. Thankfully, my name was just unique enough for <span class="ubuntu-mono-italic">elijahkamali.com</span> to be available, so I forked over the 14 big ones requisite to register the domain for a year. Nice.</p>
             <p>Next on the agenda, we need to get the website's files onto AWS. First, I created an EC2 instance and configured it to be as nice and free-tier-eligible as possible, running on Amazon Linux 2023 with a whopping 8 gigabytes of RAM. I also slapped together a little User Data script to update yum's repos, install httpd, and create a sample index.html file for testing:</p>
             <pre><code>
+#!/bin/bash
 yum update -y
 yum install -y httpd
 systemctl start httpd
